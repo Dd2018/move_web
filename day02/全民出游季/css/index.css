@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    overflow: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: url(../images/f1_1.jpg) no-repeat center 0;
+    background-size: cover;
+}
+
+.cloud {
+    position: relative;
+}
+
+.cloud img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    animation: cloud 1s infinite alternate;
+}
+
+.cloud img:nth-child(1) {
+    margin-left: -300px;
+    top: 20px;
+}
+
+.cloud img:nth-child(2) {
+    margin-left: 550px;
+    top: 100px;
+    animation-delay: .2s;
+}
+
+.cloud img:nth-child(3) {
+    margin-left: -500px;
+    top: 200px;
+    animation-delay: .4s;
+}
+
+.point img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100px;
+    animation: updown 1s infinite alternate;
+}
+
+.point img:nth-child(1) {
+    margin-left: -360px;
+    bottom: 60px;
+}
+
+.point img:nth-child(2) {
+    margin-left: -87px;
+    bottom: 60px;
+    animation-delay: .25s;
+}
+
+.point img:nth-child(3) {
+    margin-left: 234px;
+    bottom: 60px;
+    animation-delay: .5s;
+}
+
+.point img:nth-child(4) {
+    margin-left: 440px;
+    bottom: 60px;
+    animation-delay: .75s;
+}
+
+
+/* 气球 */
+
+.balloon img {
+    position: absolute;
+    margin-left: 550px;
+    top: 100px;
+    animation: updown 2s infinite alternate;
+}
+
+
+/* 居中文字 */
+
+.text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: text_scale 1s forwards;
+}
+
+
+/* 长颈鹿 */
+
+.cjl img {
+    position: absolute;
+    top: 150px;
+    right: 650px;
+}
+
+
+/* 左右动画 */
+
+@keyframes cloud {
+    to {
+        transform: translateX(25px);
+    }
+}
+
+
+/*上下动画 */
+
+@keyframes updown {
+    to {
+        transform: translateY(-25px);
+    }
+}
+
+
+/* 文字放大动画 */
+
+@keyframes text_scale {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    25% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.4);
+    }
+    75% {
+        transform: translate(-50%, -50%) scale(.8);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

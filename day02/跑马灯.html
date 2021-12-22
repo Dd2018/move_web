@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 140px;
+            height: 140px;
+            /* border: 1px solid #333; */
+            background: url(./images/bg.png);
+            animation: run 1s steps(12) infinite, move 5s forwards;
+        }
+        /* 小人奔跑 */
+        
+        @keyframes run {
+            /* from {
+                background-position: 0 0;
+            } */
+            to {
+                background-position: -1680px 0;
+            }
+        }
+        /* 小人移动 */
+        
+        @keyframes move {
+            /* from {
+                margin-left: 0;
+            } */
+            to {
+                margin-left: 600px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+</body>
+
+</html>
